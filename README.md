@@ -1,4 +1,4 @@
-# Sauvegarde Cloud
+# TP Sauvegarde Cloud
 
 ## Description du travail à effectuer
 Vous devez mettre en place la sauvegarde de cette application de la
@@ -12,12 +12,6 @@ ce qu’elle s’effectue de manière totalement automatique, le plus
 fréquemment possible et en mettent en application les bonnes pratiques
 étudiées en cours.
 
-### Travail à rendre
-Vous enverrez l’ensemble des scripts ainsi qu’une procédure simplifiée
-d’utilisation et de restauration de votre système par mail à l’adresse suivante:
-anthony@avalone-fr.com
-La date limite de remise est fixé au 22 février 2019.
-
 ## Notes concernant l'installation
 Le sujet du TP ne concernant les éventuelles modifications des
 machines virtuelles fournies, nous nous contenteront d'expliquer la
@@ -30,15 +24,6 @@ appel de cette commande il est nécessaire d'utiliser une paire de
 clés ssh. De plus, la connection entre les deux machines est effectuée
 en root (bien que cela ne soit pas recommandé cela nous a paru
 acceptable dans le cadre de l'exercice).
-
-Nous utiliseront le fichier de configuration suivant
-(/root/.ssh/config):
-
-Host backup
-	User root
-	Port 22
-	Hostname 192.168.33.201
-	IdentityFile ~/.ssh/backup-server-key
 
 ### Mise en place du script
 _root@nextcloud$ git clone https://github.com/BasicAcid/sauvegarde_

@@ -1,0 +1,42 @@
+--------------------TP Sauvegarde Cloud------------------------------
+
+---------Description du travail à effectuer
+Vous devez mettre en place la sauvegarde de cette application de la
+manière la plus efficace possible en considérant que le volume de
+données peut devenir très important.  De plus, vous devrez permettre
+une historisation de ces sauvegardes avec une durée de rétention de 30
+jours.  Vous sauvegarderez bien évidemment les fichiers aussi bien que
+la base de données de manière à ce qu’une restauration soit
+parfaitement possible.  Vous planifierez cette sauvegarde de manière à
+ce qu’elle s’effectue de manière totalement automatique, le plus
+fréquemment possible et en mettent en application les bonnes pratiques
+étudiées en cours.
+
+
+---------Notes concernant l'installation
+Les scripts permettent de faire un backup puis une restauration des 
+fichiers et de la base de données.
+
+
+--------Pré-requis
+
+Modifier la variable BACKUP : 
+(<Utilisateur> +@ + <Adresse ip du serveur de backup>)dans les scripts 
+si nécessaire 
+
+
+--------Fonctionnement
+---------------Backup.sh
+Le script de backup fait une première sauvegarde complête (au changement
+ de semaine) puis des sauvegardes incrémentielles le reste de la semaine.
+
+On peut automatiser le script avec une tache cron si nécessaire.
+
+---------------Backup-maintenance.sh
+Idem au script Backup.sh sauf qu'on fait le traitement en mode maintenance.
+Cela peut être nécessaire si beaucoup d'utilisateurs sont présents sur le cloud.
+
+---------------Restore.sh
+Le script de restauration recopie les données d'une backup afin que les données 
+de NEXTCLOUD soient identiques à la date de la backup.
+
