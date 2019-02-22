@@ -3,8 +3,8 @@
 NEXTCLOUD_DIR="/var/www/html/nextcloud"
 BCK_HOST="root@192.168.33.201"
 
-if [! -d "/root/backup"]; then
-    sudo mkdir /root/backup
+if [ ! -d "/root/backup" ]; then
+    ssh $BCK_HOST mkdir /root/backup
 fi
 
 
